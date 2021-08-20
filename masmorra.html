@@ -21,13 +21,13 @@
         #hero{
             color: rgb(77, 182, 252);
         }
-        td.orc{
+        .orc{
             color: palegreen;
         }
-        td.treasure{
+        .treasure{
             color: gold;
         }
-        td.wall{
+        .wall{
             font-size: 0px;
             background-color: grey;
         }
@@ -483,7 +483,9 @@
         const celulas = document.querySelectorAll('td');
         
         for (let i = 0; i < celulas.length-1; i++) {
-            celulas[i].classList.add('wall');
+            if (celulas[i].classList.value === "") {
+                celulas[i].classList.add('wall');
+            }
         };
 
     </script>
