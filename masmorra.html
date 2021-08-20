@@ -481,7 +481,11 @@
 
     <script>
         const celulas = document.querySelectorAll('td');
-        console.log(celulas);
+        
+        for (let i = 0; i < celulas.length-1; i++) {
+            celulas[i].classList.add('wall');
+        };
+
     </script>
 </body>
 </html>
