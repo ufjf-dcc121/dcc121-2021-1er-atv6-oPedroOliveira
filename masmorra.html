@@ -481,13 +481,17 @@
 
     <script>
         const celulas = document.querySelectorAll('td');
-        
+        //console.log(celulas);
         for (let i = 0; i < celulas.length-1; i++) {
             if (celulas[i].classList.value === "") {
                 celulas[i].classList.add('wall');
             }
+            celulas[i].addEventListener('click', celulaClick, false);
         };
 
+        function celulaClick (event) {
+            console.log(this.className);
+        };
     </script>
 </body>
 </html>
