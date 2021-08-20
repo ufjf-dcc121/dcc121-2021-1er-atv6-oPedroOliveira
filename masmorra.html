@@ -498,14 +498,18 @@
                 console.log(celula.className);
             } else if (celula.className === "") {
                 celula.classList.add('orc');
+                celula.innerHTML = "O";
                 console.log(celula.className);
             } else if (celula.classList.contains('orc')) {
-                celula.classList.add('treasure');
                 celula.classList.remove('orc');
+                celula.innerHTML = "";
+                celula.classList.add('treasure');
+                celula.innerHTML = "T";
                 console.log(celula.className);
             } else {
-                celula.classList.add('wall');
                 celula.classList.remove('treasure');
+                celula.innerHTML = "";
+                celula.classList.add('wall');
                 console.log(celula.className);
             } 
         };
