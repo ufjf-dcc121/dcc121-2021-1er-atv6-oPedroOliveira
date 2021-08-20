@@ -490,7 +490,24 @@
         };
 
         function celulaClick (event) {
-            console.log(this.className);
+            let celula = event.target;
+            console.log(celula.className);
+
+            if (celula.classList.contains('wall')) {
+                celula.classList.remove('wall');
+                console.log(celula.className);
+            } else if (celula.className === "") {
+                celula.classList.add('orc');
+                console.log(celula.className);
+            } else if (celula.classList.contains('orc')) {
+                celula.classList.add('treasure');
+                celula.classList.remove('orc');
+                console.log(celula.className);
+            } else {
+                celula.classList.add('wall');
+                celula.classList.remove('treasure');
+                console.log(celula.className);
+            } 
         };
     </script>
 </body>
